@@ -1,0 +1,1 @@
+ln -s ~/animated-octo-robot ~/qmk_firmware/keyboards/crkbd/keymaps/hawkbane
