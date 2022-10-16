@@ -19,22 +19,34 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include QMK_KEYBOARD_H
 #include <stdio.h>
 
-#define _COLEMAK 0
-#define _SYM 1
-#define _DIR 2
-#define _NUM 3
-#define _NAV 4
+enum layers {
+    _COLEMAK = 0,
+    _SYM,
+    _DIR,
+    _NUM,
+    _NAV,
+};
+
+#define G_A LGUI_T(KC_A)
+#define S_R LALT_T(KC_R)
+#define A_S RSFT_T(KC_S)
+#define C_T LCTL_T(KC_T)
+
+#define C_N RCTL_T(KC_N)
+#define A_E RALT_T(KC_E)
+#define S_I RSFT_T(KC_I)
+#define G_O RGUI_T(KC_O)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_COLEMAK] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       XXXXXXX,    KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,                         KC_J,    KC_L,    KC_U,    KC_Y, KC_SCLN, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX,LGUI(KC_A),LSFT(KC_R),LALT(KC_S),LCTL(KC_T),    KC_G,                         KC_M,RCTL(KC_N),RALT(KC_E),RSFT(KC_I),RGUI(KC_O), XXXXXXX,
+      XXXXXXX,     G_A,     S_R,     A_S,     C_T,    KC_G,                         KC_M,     C_N,     A_E,     S_I,     G_O, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX,    KC_Z,    KC_X,    KC_C, LT(_DIR, KC_D),    KC_V,                   KC_K, LT(_NUM, KC_H), KC_COMM,  KC_DOT, KC_SLSH,CAPS_WORD,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          XXXXXXX,  LT(_NAV, KC_SPC), OSM(MOD_LSFT), OSM(LSFT(KC_LGUI)),  OSL(_SYM), XXXXXXX
+                            XXXXXXX,  LT(_NAV, KC_SPC), OSM(MOD_LSFT), OSM(LSFT(KC_LGUI)),  OSL(_SYM), XXXXXXX
                                       //`--------------------------'  `--------------------------'
 
   ),
@@ -53,9 +65,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_DIR] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, KC_HOME, KC_PGDN, KC_PGUP, KC_END, XXXXXXX,
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_HOME, KC_PGDN, KC_PGUP, KC_END, XXXXXXX, XXXXXXX, 
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, XXXXXXX,
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
