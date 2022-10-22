@@ -38,6 +38,13 @@ enum layers {
 #define G_O RGUI_T(KC_O)
 #define S_C_A LSFT(LCTL(KC_LALT))
 
+#define DIR_T LT(_DIR, KC_D)
+#define NUM_H LT(_NUM, KC_H)
+
+#define NAV_SPC LT(_NAV, KC_SPC)
+#define OSM_S OSM(MOD_LSFT)
+#define OSM_OS OSM(MOD_LSFT | MOD_LGUI)
+
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_COLEMAK] = LAYOUT_split_3x6_3(
@@ -46,9 +53,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX,     G_A,     S_R,     A_S,     C_T,    KC_G,                         KC_M,     C_N,     A_E,     S_I,     G_O, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX,    KC_Z,    KC_X,    KC_C, LT(_DIR, KC_D),    KC_V,                   KC_K, LT(_NUM, KC_H), KC_COMM,  KC_DOT, KC_SLSH,CAPS_WORD,
+      XXXXXXX,    KC_Z,    KC_X,    KC_C,   DIR_T,    KC_V,                         KC_K,   NUM_H, KC_COMM,  KC_DOT, KC_SLSH,CAPS_WORD,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                            XXXXXXX,  LT(_NAV, KC_SPC), OSM(MOD_LSFT), OSM(LSFT(MOD_LGUI)),  OSL(_SYM), XXXXXXX
+                                           XXXXXXX,  NAV_SPC, OSM_S,     OSM_OS,OSL(_SYM), XXXXXXX
                                       //`--------------------------'  `--------------------------'
 
   ),
