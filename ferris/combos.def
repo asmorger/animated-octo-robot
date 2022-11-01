@@ -1,0 +1,3 @@
+// http://combos.gboards.ca/docs/combos/
+
+COMB(capsWord,      CAPSWORD,          KC_A, KC_SCLN)
