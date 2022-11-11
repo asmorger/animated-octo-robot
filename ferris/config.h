@@ -26,3 +26,21 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define ONESHOT_TAP_TOGGLE 2  /* Tapping this number of times holds the key until tapped once again. */
 #define ONESHOT_TIMEOUT 5000  /* Time (in ms) before the one shot key is released */
+
+#define LEADER_TIMEOUT 300
+
+#undef MOUSEKEY_DELAY
+#define MOUSEKEY_DELAY 5
+#undef MOUSEKEY_INTERVAL
+#define MOUSEKEY_INTERVAL 16
+#undef MOUSEKEY_MOVE_DELTA
+#define MOUSEKEY_MOVE_DELTA 1
+#undef MOUSEKEY_INITIAL_SPEED 
+#define MOUSEKEY_INITIAL_SPEED 1
+#undef MOUSEKEY_DECELERATED_SPEED
+#define MOUSEKEY_DECELERATED_SPEED 12
+#undef MOUSEKEY_MAX_SPEED
+#define MOUSEKEY_MAX_SPEED 22
+#define USB_SUSPEND_WAKEUP_DELAY 0
+#undef MOUSEKEY_WHEEL_INTERVAL
+#define MOUSEKEY_WHEEL_INTERVAL 83
