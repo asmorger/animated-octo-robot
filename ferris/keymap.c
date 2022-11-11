@@ -65,7 +65,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|-------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+|
      KC_LCBR, KC_RCBR, KC_LPRN, KC_RPRN, KC_QUES,                      KC_EQL, KC_TILD, KC_SLASH, KC_DQUO,  KC_ENT,
   //|-------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+|
-      KC_F22, KC_TILD, KC_LBRC, KC_RBRC, KC_AMPR,                      KC_MINS, KC_MINS, KC_BSLS,  KC_GRV,  KC_F21,
+      KC_F22, KC_TILD, KC_LBRC, KC_RBRC, KC_AMPR,                      KC_MINS,  KC_EQL, KC_BSLS,  KC_GRV,  KC_F21,
   //|-------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+|
                                   KC_BSPC, LCTL(KC_BSPC),     KC_TAB, XXXXXXX
                             //`--------------------------'  `--------------------------'
@@ -105,9 +105,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [_NAV] = LAYOUT_split_3x5_2(
   //,-------------------------------------------.                    ,--------------------------------------------.
-     QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, QK_BOOT,
+     QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, KC_BTN1, KC_BTN2, QK_BOOT,
   //|-------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------|
-     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R,
   //|-------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------|
      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, KC_VOLD, KC_VOLU, KC_MUTE, XXXXXXX,
   //|-------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------|
