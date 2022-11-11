@@ -18,14 +18,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #pragma once
 #define MASTER_LEFT
 
-#define LEADER_PER_KEY_TIMING
-#define LEADER_TIMEOUT 250
-
-#define TAPPING_TERM 150
-#define TAPPING_TERM_PER_KEY
-#define LONG_TAPPING_TERM 1000
-#define PERMISSIVE_HOLD
 #define IGNORE_MOD_TAP_INTERRUPT
+#define TAPPING_FORCE_HOLD
+#undef TAPPING_TERM
+#define TAPPING_TERM 240
+#define PERMISSIVE_HOLD
 
 #define ONESHOT_TAP_TOGGLE 2  /* Tapping this number of times holds the key until tapped once again. */
 #define ONESHOT_TIMEOUT 5000  /* Time (in ms) before the one shot key is released */
