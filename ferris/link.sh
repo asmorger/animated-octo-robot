@@ -1,1 +1,1 @@
-ln -s ~/urban-waddle ~/qmk_firmware/keyboards/ferris/keymaps/hawkbane-sweep
+ln -s ~/dev/personal/animated-octo-robot/ferris ~/qmk_firmware/keyboards/ferris/keymaps/hawkbane
