@@ -1,0 +1,8 @@
+{
+    "editor.fontFamily": "'MonoLisa'",
+    "workbench.colorTheme": "Cyberpunk",
+    "editor.fontSize": 15,
+    "files.associations": {
+        "select_word.h": "c"
+    }
+}
