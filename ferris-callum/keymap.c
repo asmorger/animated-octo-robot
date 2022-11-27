@@ -14,6 +14,8 @@
 #define LA_SYM MO(SYM)
 #define LA_NAV MO(NAV)
 #define UI OSM(MOD_LSFT | MOD_LGUI)
+#define BUILD C(KC_B)
+#define TEST C(S(KC_ENT))
 
 enum layers {
     DEF,
@@ -58,7 +60,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [NUM] = LAYOUT_split_3x5_2(
         KC_7,    KC_5,    KC_3,    KC_1,    KC_9,    KC_8,    KC_0,    KC_2,    KC_4,    KC_6,
         OS_SHFT, OS_CTRL, OS_ALT,  OS_CMD,  KC_F11,  KC_F10,  OS_CMD,  OS_ALT,  OS_CTRL, OS_SHFT,
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, BACK,    KC_VOLD, KC_VOLU, FWD,     XXXXXXX,
+        XXXXXXX, XXXXXXX, TEST,    BUILD,   XXXXXXX, BACK,    KC_VOLD, KC_VOLU, FWD,     XXXXXXX,
                                    _______, _______, _______, _______
     ),
 };
@@ -72,7 +74,6 @@ bool is_oneshot_cancel_key(uint16_t keycode) {
         return false;
     }
 }
-
 bool is_oneshot_ignored_key(uint16_t keycode) {
     switch (keycode) {
     case LA_SYM:
