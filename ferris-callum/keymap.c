@@ -37,6 +37,8 @@ enum keycodes {
     //OS_ALT,
     //OS_CMD,
 
+    LOWER,
+    RAISE,
     SW_WIN = SAFE_RANGE,  // Switch to next window         (cmd-tab)
     SW_LANG, // Switch to next input language (ctl-spc)
     REPEAT, // https://gist.github.com/NotGate/3e3d8ab81300a86522b2c2549f99b131?permalink_comment_id=4282534#gistcomment-4282534
@@ -47,7 +49,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,    KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN,
         KC_A,    KC_R,    KC_S,    KC_T,    KC_G,    KC_M,    KC_N,    KC_E,    KC_I,    KC_O,
         KC_Z,    KC_X,    KC_C,    KC_D,    KC_V,    KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_QUOT,
-                                TL_LOWR,  KC_SPC,      UI,  TL_UPPR
+                                  LOWER,  KC_SPC,      UI,   RAISE
     ),
 
     [SYM] = LAYOUT_split_3x5_2(
@@ -71,6 +73,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                    _______, _______, _______, _______
     ),
 };
+
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  switch (keycode) {
+    case LOWER:
+      if (record->event.pressed) {
+        layer_on(SYM);
+        update_tri_layer(SYM, NAV, NUM);
+      } else {
+        layer_off(SYM);
+        update_tri_layer(SYM, NAV, NUM);
+      }
+      return false;
+    case RAISE:
+      if (record->event.pressed) {
+        layer_on(NAV);
+        update_tri_layer(SYM, NAV, NUM);
+      } else {
+        layer_off(NAV);
+        update_tri_layer(SYM, NAV, NUM);
+      }
+      return false;
+    }
+  return true;
+}
 
 layer_state_t layer_state_set_user(layer_state_t state) {
    return update_tri_layer_state(state, SYM, NAV, NUM);
