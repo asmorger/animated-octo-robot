@@ -17,6 +17,11 @@
 #define BUILD C(KC_B)
 #define TEST C(S(KC_ENT))
 
+#define OS_SHFT OSM(MOD_LSFT)
+#define OS_CTRL OSM(MOD_LCTL)
+#define OS_ALT OSM(MOD_LALT)
+#define OS_CMD OSM(MOD_LGUI)
+
 enum layers {
     DEF,
     SYM,
@@ -26,12 +31,12 @@ enum layers {
 
 enum keycodes {
     // Custom oneshot mod implementation with no timers.
-    OS_SHFT = SAFE_RANGE,
-    OS_CTRL,
-    OS_ALT,
-    OS_CMD,
+    //OS_SHFT,
+    //OS_CTRL,
+    //OS_ALT,
+    //OS_CMD,
 
-    SW_WIN,  // Switch to next window         (cmd-tab)
+    SW_WIN = SAFE_RANGE,  // Switch to next window         (cmd-tab)
     SW_LANG, // Switch to next input language (ctl-spc)
     REPEAT, // https://gist.github.com/NotGate/3e3d8ab81300a86522b2c2549f99b131?permalink_comment_id=4282534#gistcomment-4282534
 };
