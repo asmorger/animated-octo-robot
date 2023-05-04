@@ -12,5 +12,3 @@
 #define TAPPING_TERM 185
 
 #define PIMORONI_TRACKBALL_ROTATE //Change according to your particular installed trackball orientation.
-#define PIMORONI_TRACKBALL_INVERT_Y
-#define PIMORONI_TRACKBALL_INVERT_X
