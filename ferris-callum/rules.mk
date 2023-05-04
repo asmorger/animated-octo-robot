@@ -1,6 +1,7 @@
 RGBLIGHT_ENABLE = no
 CAPS_WORD_ENABLE = yes
 AUTO_SHIFT_ENABLE = yes
+TRI_LAYER_ENABLE = yes
 
 POINTING_DEVICE_ENABLE = yes	# Enable Pimoroni Trackball on master (+2304)
 POINTING_DEVICE_DRIVER = pimoroni_trackball
