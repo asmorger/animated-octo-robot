@@ -45,17 +45,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [SYM] = LAYOUT_split_3x5_2(
-        KC_ESC,  KC_LPRN, KC_RPRN, KC_LT,   KC_GT,   KC_LBRC, KC_RBRC, KC_LCBR, KC_RCBR, KC_GRV,
-        KC_MINS, KC_ASTR, KC_EQL,  KC_UNDS, KC_DLR,  KC_HASH, OS_CMD,  OS_ALT,  OS_CTRL, OS_SHFT,
-        KC_PLUS, KC_PIPE, KC_TILD, KC_SLSH, KC_PERC, KC_AT,   KC_BSLS, KC_AMPR, KC_QUES, KC_EXLM,
+        KC_ESC,  KC_LPRN, KC_LT,   KC_LBRC, KC_LCBR, KC_RCBR, KC_RBRC,   KC_GT, KC_RPRN,  KC_GRV,
+        KC_MINS, KC_ASTR, KC_EQL,  KC_UNDS, KC_DLR,  KC_AT,    OS_CMD,  OS_ALT, OS_CTRL, OS_SHFT,
+        KC_PLUS, KC_PIPE, KC_TILD, KC_SLSH, KC_PERC, KC_HASH, KC_BSLS, KC_AMPR, KC_QUES, KC_EXLM,
                                    _______, REPEAT,  _______, _______
     ),
 
     [NAV] = LAYOUT_split_3x5_2(
-        KC_TAB,  SW_WIN,  TAB_L,   TAB_R,    RESET,  KC_HOME, KC_PGDN, KC_PGUP,KC_END,  KC_DEL,
+        KC_TAB,  SW_WIN,  TAB_L,   TAB_R,  QK_BOOT,  KC_HOME, KC_PGDN, KC_PGUP,KC_END,  KC_DEL,
         OS_SHFT, OS_CTRL, OS_ALT,  OS_CMD,  XXXXXXX, KC_LEFT, KC_DOWN, KC_UP,  KC_RGHT, KC_BSPC,
         SPACE_L, SPACE_R, XXXXXXX,XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,_______, KC_ENT,
-                                   _______, _______, CAPSWRD, _______
+                                   _______, _______, _______, _______
     ),
 
     [NUM] = LAYOUT_split_3x5_2(
