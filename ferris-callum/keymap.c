@@ -70,7 +70,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_7   ,    KC_5,  KC_3,      KC_1,    KC_9,    KC_8,    KC_0,    KC_2,   KC_4,          KC_6,
         KC_F7  ,   KC_F5, KC_F3,    KC_F11,   KC_F1,  KC_F12,  KC_F10,   KC_F2,  KC_F4, LCTL(KC_BSPC),
         XXXXXXX, XXXXXXX,  TEST,     BUILD, XXXXXXX,    BACK, KC_VOLD, KC_VOLU,    FWD,  LALT(KC_ENT),
-                                   _______, _______, _______, _______
+                                   _______, _______, QK_BOOT, _______
     ),
 };
 
