@@ -8,7 +8,7 @@
 
 #define IGNORE_MOD_TAP_INTERRUPT
 #define TAPPING_FORCE_HOLD
-#define RETRO_TAPPING 
-#define TAPPING_TERM 185
+#define PERMISSIVE_HOLD 
+#define TAPPING_TERM 150
 
 #define PIMORONI_TRACKBALL_ROTATE //Change according to your particular installed trackball orientation.
