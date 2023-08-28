@@ -2,7 +2,6 @@
 
 #include "oneshot.h"
 #include "swapper.h"
-#include "drivers/sensors/pimoroni_trackball.h"
 
 #define HOME G(KC_LEFT)
 #define END G(KC_RGHT)
@@ -49,28 +48,27 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,    KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN,
         KC_A,    KC_R,    KC_S,    KC_T,    KC_G,    KC_M,    KC_N,    KC_E,    KC_I,    KC_O,
         KC_Z,    KC_X,    KC_C,    KC_D,    KC_V,    KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_QUOT,
-                                TL_UPPR,  KC_SPC,      UI, TL_LOWR
+                        LT(NAV, KC_SPC),  KC_SPC,    UI, LT(SYM, KC_ENT)
     ),
 
     [SYM] = LAYOUT_split_3x5_2(
-        KC_ESC,  KC_LPRN, KC_LT,   KC_LCBR, KC_LABK, KC_RABK, KC_RCBR,   KC_GT, KC_RPRN,  KC_GRV,
+        KC_ESC,  KC_LPRN, KC_LT,   KC_LCBR, KC_LBRC, KC_RBRC, KC_RCBR,   KC_GT, KC_RPRN,  KC_GRV,
         KC_MINS, KC_ASTR, KC_EQL,  KC_UNDS, KC_DLR,  KC_AT,    OS_CMD,  OS_ALT, OS_CTRL, OS_SHFT,
         KC_PLUS, KC_PIPE, KC_TILD, KC_SLSH, KC_PERC, KC_HASH, KC_BSLS, KC_AMPR, KC_QUES, KC_EXLM,
-                                   _______, _______,  _______, _______
+                                   MO(NUM), _______,  _______, _______
     ),
 
     [NAV] = LAYOUT_split_3x5_2(
         KC_TAB,  SW_WIN,  TAB_L,   TAB_R,   XXXXXXX,  KC_HOME, KC_PGDN, KC_PGUP,KC_END,  KC_DEL,
         OS_SHFT, OS_CTRL, OS_ALT,  OS_CMD,  XXXXXXX, KC_LEFT, KC_DOWN, KC_UP,  KC_RGHT, KC_BSPC,
         SPACE_L, SPACE_R, XXXXXXX,XXXXXXX,  QK_BOOT, QK_BOOT, XXXXXXX, XXXXXXX,_______, KC_ENT,
-                                   _______, _______, _______, _______
+                                   _______, _______, CW_TOGG, MO(NUM)
     ),
 
     [NUM] = LAYOUT_split_3x5_2(
         KC_7   ,    KC_5,  KC_3,      KC_1,    KC_9,    KC_8,    KC_0,    KC_2,   KC_4,          KC_6,
         KC_F7  ,   KC_F5, KC_F3,    KC_F11,   KC_F1,  KC_F12,  KC_F10,   KC_F2,  KC_F4, LCTL(KC_BSPC),
         XXXXXXX, XXXXXXX,  TEST,     BUILD, XXXXXXX,    BACK, KC_VOLD, KC_VOLU,    FWD,  LALT(KC_ENT),
-                                   _______, _______, QK_BOOT, _______
+                                   _______, _______, _______, _______
     ),
 };
-
