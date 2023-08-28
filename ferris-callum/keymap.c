@@ -1,8 +1,5 @@
 #include QMK_KEYBOARD_H
 
-#include "oneshot.h"
-#include "swapper.h"
-
 #define HOME G(KC_LEFT)
 #define END G(KC_RGHT)
 #define FWD G(KC_RBRC)
