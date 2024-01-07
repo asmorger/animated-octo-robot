@@ -1,0 +1,1 @@
+ln -s ~/dev/20-Personal/23-Keyboard-Firmware/animated-octo-robot/corne-steno ~/qmk_firmware/keyboards/crkbd/keymaps/hawkbane-steno

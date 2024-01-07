@@ -5,3 +5,5 @@ TRI_LAYER_ENABLE = no
 
 # Bootloader selection
 BOOTLOADER = atmel-dfu
+
+SRC += flow.c
