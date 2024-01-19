@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include QMK_KEYBOARD_H
+#include "keymap_steno.h"
 #include <stdio.h>
 
 enum layers {
@@ -24,7 +25,8 @@ enum layers {
     _SYM,
     _DIR,
     _NUM,
-    _NAV
+    _NAV,
+    _STENO
 };
 
 #define G_A LGUI_T(KC_A)
@@ -106,6 +108,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, _______, XXXXXXX
                                       //`--------------------------'  `--------------------------'
-  )
+  ),
+    [_STENO] = LAYOUT_split_3x6_3(
+		XXXXXXX,  STN_S1,  STN_TL,  STN_PL,  STN_HL,  STN_ST1,  STN_ST3,  STN_FR,  STN_PR,  STN_LR,  STN_TR,  STN_DR,
+		XXXXXXX,  STN_S2,  STN_KL,  STN_WL,  STN_RL,  STN_ST2,  STN_ST4,  STN_RR,  STN_BR,  STN_GR,  STN_SR,  STN_ZR,
+        XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+              TG(_STENO),  STN_A,   STN_O,   STN_E,   STN_U,  STN_N2)
 };
 
