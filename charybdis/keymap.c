@@ -60,10 +60,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [LAYER_LOWER] = LAYOUT(
   // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
-
         KC_ESC,  KC_LPRN, KC_LT,   KC_LCBR, KC_LBRC, KC_RBRC, KC_RCBR,   KC_GT, KC_RPRN,  KC_GRV,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-        
         KC_MINS, KC_ASTR, KC_EQL,  KC_UNDS, KC_DLR,    KC_AT,  OS_CMD, OS_CTRL,  OS_ALT, OS_SHFT,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
         KC_PLUS, KC_PIPE, KC_TILD, KC_SLSH, KC_PERC, KC_HASH, KC_BSLS, KC_AMPR, KC_QUES, KC_EXLM,
@@ -80,7 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
         XXXXXXX,XXXXXXX, XXXXXXX,XXXXXXX,  QK_BOOT, QK_BOOT, XXXXXXX, XXXXXXX,_______, KC_ENT,
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
-                         _______, _______, XXXXXXX,    _______,    TRI
+                         _______, _______, XXXXXXX,    CW_TOGG,    TRI
   //                   ╰───────────────────────────╯ ╰──────────────────╯
   ),
   
