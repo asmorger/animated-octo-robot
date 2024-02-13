@@ -28,7 +28,7 @@ enum charybdis_keymap_layers {
 #define LOWER MO(LAYER_LOWER)
 #define RAISE MO(LAYER_RAISE)
 #define TRI MO(LAYER_TRI)
-#define POINT OSL(LAYER_POINT)
+#define POINT MO(LAYER_POINT)
 
 #define OS_SHFT OSM(MOD_LSFT)
 #define OS_CTRL OSM(MOD_LCTL)
@@ -76,7 +76,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
         OS_SHFT, OS_ALT,OS_CTRL,OS_CMD,  XXXXXXX, KC_LEFT, KC_DOWN, KC_UP,  KC_RGHT, KC_BSPC,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-        XXXXXXX,XXXXXXX, XXXXXXX,XXXXXXX,  QK_BOOT, QK_BOOT, XXXXXXX, XXXXXXX,_______, KC_ENT,
+        XXXXXXX,XXXXXXX, XXXXXXX,XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,_______, KC_ENT,
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
                          _______, _______, XXXXXXX,    CW_TOGG,    TRI
   //                   ╰───────────────────────────╯ ╰──────────────────╯
@@ -96,13 +96,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [LAYER_POINT] = LAYOUT(
   // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
-        KC_7   ,    KC_5,  KC_3,      KC_1,    KC_9,    KC_8,    KC_0,    KC_2,   KC_4,          KC_6,
+        QK_BOOT,XXXXXXX, XXXXXXX,XXXXXXX, XXXXXXX,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, QK_BOOT,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-        KC_F7  ,   KC_F5, KC_F3,    KC_F11,   KC_F1,  KC_F12,  KC_F10,   KC_F2,  KC_F4, LCTL(KC_BSPC),
+        KC_BTN1,KC_BTN2, XXXXXXX,XXXXXXX, XXXXXXX,   XXXXXXX, XXXXXXX, XXXXXXX, KC_BTN2, KC_BTN1,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-        XXXXXXX, XXXXXXX,  TEST,     BUILD, XXXXXXX, XXXXXXX, KC_VOLD, KC_VOLU, XXXXXXX,  LALT(KC_ENT),
+        KC_ACL0,KC_ACL1, KC_ACL2,XXXXXXX, XXXXXXX,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
-                         KC_BTN1,   KC_BTN2, KC_BTN3, KC_BTN2, KC_BTN1
+                         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
   //                   ╰───────────────────────────╯ ╰──────────────────╯
   ),
 };
