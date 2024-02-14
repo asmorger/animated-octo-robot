@@ -96,9 +96,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [LAYER_POINT] = LAYOUT(
   // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
-        QK_BOOT,XXXXXXX, XXXXXXX,XXXXXXX, XXXXXXX,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, QK_BOOT,
+        XXXXXXX,XXXXXXX, XXXXXXX,XXXXXXX, QK_BOOT,   QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-        KC_BTN1,KC_BTN2, XXXXXXX,XXXXXXX, XXXXXXX,   XXXXXXX, XXXXXXX, XXXXXXX, KC_BTN2, KC_BTN1,
+        KC_BTN1,KC_BTN2, KC_BTN3,XXXXXXX, XXXXXXX,   XXXXXXX,  OS_CMD, OS_CTRL,  OS_ALT, OS_SHFT,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
         KC_ACL0,KC_ACL1, KC_ACL2,XXXXXXX, XXXXXXX,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
