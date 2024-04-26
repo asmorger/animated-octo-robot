@@ -1,6 +1,9 @@
 # Build Options
 #   change yes to no to disable
-#
+
+# Adds Bootloader so I can control handness in the builds for debugging
+BOOTLOADER = rp2040
+
 BOOTMAGIC_ENABLE = yes      # Enable Bootmagic Lite
 MOUSEKEY_ENABLE = no        # Mouse keys
 EXTRAKEY_ENABLE = yes       # Audio control and System control
