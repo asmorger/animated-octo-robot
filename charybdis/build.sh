@@ -1,1 +1,1 @@
-qmk compile -c -kb bastardkb/charybdis/3x5/v2/splinky_3 -km hawkbane
+qmk compile -c -kb bastardkb/charybdis/3x5 -km hawkbane
